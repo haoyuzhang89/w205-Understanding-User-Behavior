@@ -1,5 +1,8 @@
 # Project 3: Understanding User Behavior
 
+(**Our pipeline demonstration and analysis are combined in the Project3_Report file for both notebook and MD version**)
+
+
 ## Abstract
 
 As a data scientist at a game development company, our latest mobile game has events we're interested in tracking: buy a sword, buy a shield & join guild. Each has metadata characterstic of such events (i.e., rarity, guild name, etc)
