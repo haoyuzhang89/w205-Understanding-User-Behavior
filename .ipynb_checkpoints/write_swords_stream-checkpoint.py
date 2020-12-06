@@ -14,23 +14,8 @@ def purchase_sword_event_schema():
     |-- Host: string (nullable = true)
     |-- User-Agent: string (nullable = true)
     |-- event_type: string (nullable = true)
-    |-- timestamp: string (nullable = true)
-    """
-    return StructType([
-        StructField("Accept", StringType(), True),
-        StructField("Host", StringType(), True),
-        StructField("User-Agent", StringType(), True),
-        StructField("event_type", StringType(), True),
-    ])
-
-def purchase_shield_event_schema():
-    """
-    root
-    |-- Accept: string (nullable = true)
-    |-- Host: string (nullable = true)
-    |-- User-Agent: string (nullable = true)
-    |-- event_type: string (nullable = true)
     |-- rarity: string (nullable = true)
+    |-- player_name: string (nullable = true)
     |-- timestamp: string (nullable = true)
     """
     return StructType([
@@ -39,6 +24,7 @@ def purchase_shield_event_schema():
         StructField("User-Agent", StringType(), True),
         StructField("event_type", StringType(), True),
         StructField("rarity", StringType(), True),
+        StructField("player_name", StringType(), True),
     ])
 
 
@@ -48,15 +34,6 @@ def is_sword_purchase(event_as_json):
     """
     event = json.loads(event_as_json)
     if event['event_type'] == 'purchase_sword':
-        return True
-    return False
-
-@udf('boolean')
-def is_shield_purchase(event_as_json):
-    """udf for filtering events
-    """
-    event = json.loads(event_as_json)
-    if event['event_type'] == 'shield_sword':
         return True
     return False
 
