@@ -15,6 +15,7 @@ def purchase_shield_event_schema():
     |-- User-Agent: string (nullable = true)
     |-- event_type: string (nullable = true)
     |-- rarity: string (nullable = true)
+    |-- player_name: string (nullable = true)
     |-- timestamp: string (nullable = true)
     """
     return StructType([
@@ -23,6 +24,7 @@ def purchase_shield_event_schema():
         StructField("User-Agent", StringType(), True),
         StructField("event_type", StringType(), True),
         StructField("rarity", StringType(), True),
+        StructField("player_name", StringType(), True),
     ])
 
 

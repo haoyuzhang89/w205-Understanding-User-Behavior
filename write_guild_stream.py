@@ -16,6 +16,7 @@ def join_guild_event_schema():
     |-- event_type: string (nullable = true)
     |-- rarity: string (nullable = true)
     |-- player_name: string (nullable = true)
+    |-- guild_name: string (nullable = true)
     |-- timestamp: string (nullable = true)
     """
     return StructType([
@@ -25,6 +26,7 @@ def join_guild_event_schema():
         StructField("event_type", StringType(), True),
         StructField("rarity", StringType(), True),
         StructField("player_name", StringType(), True),
+        StructField("guild_name", StringType(), True),
     ])
 
 
