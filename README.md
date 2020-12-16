@@ -58,13 +58,14 @@ Our project is intended to mimic a real world gaming system to include simple ga
 
 ## Link to the report
 
-[Project Report](Project3_Report.ipynb)\
-[Project Report md version](Project3_Report.md)\
-[Database Set-Up](create_database.ipynb)\
-[API Set-Up](game_api.py)\
-[Guild Stream Set-Up](write_guild_stream.py)\
-[Swords Stream Set-Up](write_swords_stream.py)\
-[Shields Stream Set-Up](write_shields_stream.py)
+[Project Report](Report\Project3_Report.ipynb)\
+[Project Report md version](Report\Project3_Report.md)\
+[Database Set-Up](Code\create_database.ipynb)\
+[API Set-Up](Code\game_api.py)\
+[Guild Stream Set-Up](Code\write_guild_stream.py)\
+[Swords Stream Set-Up](Code\write_swords_stream.py)\
+[Shields Stream Set-Up](Code\write_shields_stream.py)\
+[Presentation](Presentation\W205_06_team4_presentation(2020Fall).pdf)
 
 
     
