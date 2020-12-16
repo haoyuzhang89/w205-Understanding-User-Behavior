@@ -65,7 +65,7 @@ Our project is intended to mimic a real world gaming system to include simple ga
 [Guild Stream Set-Up](Code/write_guild_stream.py)\
 [Swords Stream Set-Up](Code/write_swords_stream.py)\
 [Shields Stream Set-Up](Code/write_shields_stream.py)\
-[Presentation](Presentation/W205_06_team4_presentation(2020Fall).pdf)
+[Presentation](Report/W205_06_team4_presentation(2020Fall).pdf)
 
 
     
