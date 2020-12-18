@@ -1,49 +1,74 @@
 # Project 3: Understanding User Behavior
 
-- You're a data scientist at a game development company  
-
-- Your latest mobile game has two events you're interested in tracking: `buy a
-  sword` & `join guild`
-
-- Each has metadata characterstic of such events (i.e., sword type, guild name,
-  etc)
+(**Our pipeline demonstration and analysis are combined in the Project3_Report file for both notebook and MD version**)
 
 
-## Tasks
+## Abstract
 
-- Instrument your API server to log events to Kafka
+As a data scientist at a game development company, our latest mobile game has events we're interested in tracking: buy a sword, buy a shield & join guild. Each has metadata characterstic of such events (i.e., rarity, guild name, etc)
 
-- Assemble a data pipeline to catch these events: use Spark streaming to filter
-  select event types from Kafka, land them into HDFS/parquet to make them
-  available for analysis using Presto
+Our project is intended to mimic a real world gaming system to include simple gaming ideas such as purchases, inventory, guild joining mechanics. We utilized the below tools to realize features like: 
+    1. live time player status check
+    2. Inventory tracking
+    3. Purchase randomization in terms of weapon rarity
+    4. Simple analysis using Hive and Presto utilizing the live data stream build using flask API and Kafka.
+    
+- Most of our examples shown in this report are ran our teammate's, **Haoyu Zhang's**, system, so you might observer certain system path call that is different from the owner in Github.
 
-- Use Apache Bench to generate test data for your pipeline
+- The MD file and the jupyter notebook files serve as our main report for the project to demonstrate the pipeline workflow, simple analysis. In case the format of MD is not ideal due to plateform supporting and various code examples, please refer to ou jupyter file for your reference.
 
-- Produce an analytics report where you provide a description of your pipeline
-  and some basic analysis of the events
+- **Our project focused more on API building and game event logics rather than the analysis part in Presto. The analysis for presto is intended to show idea demonstration the game owner can potentially perform rather than an actual full length data analysis with real world data.**
 
-Use a notebook to present your queries and findings. Remember that this
-notebook should be appropriate for presentation to someone else in your
-business who needs to act on your recommendations.
+    
+## Tool Used
 
-It's understood that events in this pipeline are _generated_ events which make
-them hard to connect to _actual_ business decisions.  However, we'd like
-students to demonstrate an ability to plumb this pipeline end-to-end, which
-includes initially generating test data as well as submitting a notebook-based
-report of at least simple event analytics.
+- Docker Images: 
+  - cloudera 
+  - kafka                        
+  - mids (terminal system image)
+  - spark
+  - zookeeper
+  - presto
+  (docker configuration file __docker-compose.yml__ is included)
+  
+
+- Google cloud virtual machine 
+
+- Jupyter Notebook
+
+- SQLite Database
+
+- Kafka
+
+- Hive
+
+- Flask API
+
+- Presto
 
 
-## Options
 
-There are plenty of advanced options for this project.  Here are some ways to
-take your project further than just the basics we'll cover in class:
+## Project Outcome
 
-- Generate and filter more types of events.  There are plenty of other things
-  you might capture events for during gameplay
+- Realization of functional API and data pipeline
+  
+- Operation of analysis using Presto based on test data
 
-- Enhance the API to use additional http verbs such as `POST` or `DELETE` as
-  well as additionally accept _parameters_ for events (e.g., purchase events
-  might accept sword or item type)
+-----    
 
-- Connect a user-keyed storage engine such as Redis or Cassandra up to Spark so
-  you can track user state during gameplay (e.g., user's inventory or health)
+## Link to the report
+
+[Project Report](Report/Project3_Report.ipynb)\
+[Project Report md version](Report/Project3_Report.md)\
+[Database Set-Up](Code/create_database.ipynb)\
+[API Set-Up](Code/game_api.py)\
+[Guild Stream Set-Up](Code/write_guild_stream.py)\
+[Swords Stream Set-Up](Code/write_swords_stream.py)\
+[Shields Stream Set-Up](Code/write_shields_stream.py)\
+[Presentation](Report/W205_06_team4_presentation(2020Fall).pdf)
+
+
+    
+
+
+
